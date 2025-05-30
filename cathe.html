@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I Love You Catherine</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #fff0f5, #e0ffff);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #e91e63;
+    }
+    .section {
+      margin-top: 40px;
+    }
+    p {
+      font-size: 18px;
+      color: #333;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #c2185b;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>To My Lovely Catherine 💖</h1>
+  <p>You love the Bible, wisdom, and reading — and I love you CATHERIN.</p>
+
+  <div class="section">
+    <h2>💘 Love Messages</h2>
+    <p id="loveMsg">Nakupenda Catherine, moyo wangu ni wako milele.</p>
+<button onclick="changeMsg('love')">Next Love Message</button>
+  </div>
+
+  <div class="section">
+    <h2>🙏 Apology</h2>
+    <p id="apologyMsg">Samahani kwa yote, Catherine. Natamani moyo wako usiumie tena.</p>
+    <button onclick="changeMsg('apology')">Next Apology</button>
+  </div>
+
+  <div class="section">
+    <h2>💐 Compliments</h2>
+    <p id="praiseMsg">You are more precious than rubies, and your smile brightens my world.</p>
+    <button onclick="changeMsg('praise')">Next Compliment</button>
+  </div>
+
+  <script>
+    const messages = {
+      love: [
+        "I love you, Catherine. You complete me.",
+        "Nakupenda Catherine, zaidi ya maneno.",
+        "You're my blessing, my peace, my joy.",
+        "Biblia na moyo wako safi vinanifanya nikuone wa kipekee."
+      ],
+      apology: [
+        "I'm sorry for any hurt. I never meant to cause you pain.",
+        "Samahani, Catherine. Nathamini kila kitu kwako.",
+        "Forgive me, I want to be better for you.",
+        "Najifunza kwa makosa, tafadhali nisamehe."
+      ],
+      praise: [
+        "You're beautiful inside and out.",
+        "Unapendeza kwa tabasamu lako la kipekee.",
+        "Your faith and wisdom inspire me.",
+        "Uwepo wako ni baraka kwangu kila siku."
+      ]
+    };
+function changeMsg(type) {
+const msgList = messages[type];
+      const msg = msgList[Math.floor(Math.random() * msgList.length)];
+      document.getElementById(type + "Msg").innerText = msg;
+    }
+  </script>
+
+</body>
+</html>
